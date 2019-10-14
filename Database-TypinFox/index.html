@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>PhoneBook.com</h1>
+    <h3 id="error_msg"></h3>
+    <div class="content">
+      <form id="add-phone-form">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="number" placeholder="Phone number" />
+        <button>Add Entry</button>
+      </form>
+      <ul id="phone-list"></ul>
+    </div>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: '{your Data}',
+        authDomain: '{your Data}',
+        databaseURL: '{your Data}',
+        projectId: '{your Data}',
+        storageBucket: '{your Data}',
+        messagingSenderId: '{your Data}',
+        appId: '{your Data}'
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+
+    </script>
+    <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  </body>
+</html>
